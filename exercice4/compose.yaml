@@ -1,0 +1,26 @@
+services:
+  erp:
+    image: postgres:17
+    environment:
+      - POSTGRES_DB=erp
+      - POSTGRES_PASSWORD=password
+
+
+  crm:
+    image: postgres:latest
+    environment:
+      - POSTGRES_DB=crm
+      - POSTGRES_PASSWORD=password
+
+  hr:
+    image: mysql:latest
+    environment:
+      - MYSQL_DATABASE=hr
+      - MYSQL_ROOT_PASSWORD=password
+
+  admin:
+    scale: 0
+    image: adminer:latest
+    ports:
+      - '8080:8080'
+

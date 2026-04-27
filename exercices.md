@@ -175,3 +175,7 @@ Proposer un [docker compose](https://docs.docker.com/compose/) qui doit créer l
 Le mot de passe par défaut est `password`.
 
 ![](./schema-exo4.png)
+
+Faire évoluer les services pour répondre à une problématique de montée en charge
+
+![](./schema-exo4-load-balancer.png)
