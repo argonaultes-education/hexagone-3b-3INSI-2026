@@ -162,3 +162,16 @@ docker inspect web-bdd --format='{{.NetworkSettings.Networks.tp_exo3.IPAddress}}
 ```bash
 psql -h localhost -p 8002 -U postgres tp_bdd_3
 ```
+
+# Docker Compose
+
+Proposer un [docker compose](https://docs.docker.com/compose/) qui doit créer les 4 services suivants :
+
+* service PostgreSQL latest avec la base de données nommée `crm`
+* service PostgreSQL 17 avec la base de données nommée `erp`
+* service MySQL en latest avec la base de données nommées `hr`
+* service adminer en latest
+
+Le mot de passe par défaut est `password`.
+
+![](./schema-exo4.png)
