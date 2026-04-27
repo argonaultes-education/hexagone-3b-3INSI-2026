@@ -179,3 +179,20 @@ Le mot de passe par défaut est `password`.
 Faire évoluer les services pour répondre à une problématique de montée en charge
 
 ![](./schema-exo4-load-balancer.png)
+
+
+1. Modifier le fichier de configuration nginx `nginx.conf` pour rediriger le traffic vers un ou plusieurs conteneurs du service `admin`
+
+
+
+2. Créer un nouveau service `lb` qui s'appuie sur l'image `nginx:latest` et qui utilise le fichier modifié de configuration `nginx.conf`
+
+
+
+3. Modifier la configuration du service `admin` pour ne plus avoir de redirection de port statique et ainsi permettre la mise à l'échelle (scale) du service `admin`
+
+
+4. Modifier le service `lb` pour s'assurer qu'il démarre en dernier : dépendance avec le service `admin` : [`depends_on`](https://docs.docker.com/reference/compose-file/services/#depends_on)
+
+
+5. Modifier le service `admin` pour s'assurer qu'il démarre après le démarrage complet des services de base de données.
