@@ -266,7 +266,7 @@
             <mxPoint x="1010" y="740" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="QF9fdgH0DPG-nUGe-hP1-10" connectable="0" parent="QF9fdgH0DPG-nUGe-hP1-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;" value="8080:8080" vertex="1">
+        <mxCell id="QF9fdgH0DPG-nUGe-hP1-10" connectable="0" parent="QF9fdgH0DPG-nUGe-hP1-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;" value="8006:80" vertex="1">
           <mxGeometry relative="1" x="0.4727" y="1" as="geometry">
             <mxPoint y="21" as="offset" />
           </mxGeometry>
@@ -279,6 +279,11 @@
         </mxCell>
         <mxCell id="QF9fdgH0DPG-nUGe-hP1-17" edge="1" parent="1" source="QF9fdgH0DPG-nUGe-hP1-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="QF9fdgH0DPG-nUGe-hP1-4">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QF9fdgH0DPG-nUGe-hP1-18" connectable="0" parent="QF9fdgH0DPG-nUGe-hP1-17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="8080" vertex="1">
+          <mxGeometry relative="1" x="0.2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="QF9fdgH0DPG-nUGe-hP1-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;" value="nginx load balancer" vertex="1">
           <mxGeometry height="140" width="210" x="890" y="450" as="geometry" />

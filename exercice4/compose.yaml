@@ -19,8 +19,18 @@ services:
       - MYSQL_ROOT_PASSWORD=password
 
   admin:
-    scale: 0
     image: adminer:latest
+    depends_on:
+      - hr
+      - crm
+      - erp
+
+  lb:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
     ports:
-      - '8080:8080'
+      - '8006:80'
+    depends_on:
+      - admin
 
