@@ -1,6 +1,6 @@
 # Docker
 
-## Exercice 1
+## Exercice 1 - Conteneur postgres
 
 Créer un conteneur basé sur l'image Postgres, et faire en sorte de se connecter à l'instance Postgres, sur la base de données tprevision en utilisant un autre conteneur possédant le binaire psql.
 
@@ -37,3 +37,12 @@ docker network connect revision_network db --alias db
 ```bash
 docker run --rm --network revision_network -it postgres:latest psql -h db -U postgres tprevision
 ```
+
+## Exercice 2 - Dind
+
+
+Créer un conteneur basé sur l'image [dind](https://hub.docker.com/_/docker).
+
+Créer un second conteneur capable de créer des conteneurs invisibles pour la machine hôte en utilisant le conteneur #1.
+
+Depuis ce second conteneur, créer une instance postgres comme cela a été fait dans le 1er exercice.
