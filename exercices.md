@@ -47,6 +47,9 @@ Créer un second conteneur capable de créer des conteneurs invisibles pour la m
 
 Depuis ce second conteneur, créer une instance postgres comme cela a été fait dans le 1er exercice.
 
+### Vue d'ensemble
+
+![](./schema-exo3.png)
 
 ### Solution
 
@@ -87,4 +90,28 @@ Puis créer le conteneur issu de l'exercice 1
 
 ```bash
 docker run --name db -d -e POSTGRES_DB=tprevision -e POSTGRES_PASSWORD=password  postgres:latest
+```
+
+## Exercice 3 - Redirection avec stream
+
+
+Utiliser l'image nginx pour créer un conteneur principal accessible sur le port 8002 depuis la machine hôte qui redirige le trafic vers une instance de base de données postgres.
+
+![](./schema-exo3.png)
+
+Configurer nginx et notamment le fichier nginx.conf pour qu'il intègre l'utilisation du block
+
+```
+stream {
+
+    upstream postgres {
+        server db:5432;
+    }
+
+    server {
+        listen 8002;
+        proxy_pass postgres;
+    }
+
+}
 ```
