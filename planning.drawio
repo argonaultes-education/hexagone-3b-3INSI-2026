@@ -1,0 +1,78 @@
+<mxfile host="Electron" pages="2">
+  <diagram name="Page-1" id="xIy0Wb7OQuEjFhtrG6s4">
+    <mxGraphModel dx="1417" dy="962" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" value="J1" vertex="1">
+          <mxGeometry height="100" width="200" x="50" y="13" as="geometry" />
+        </mxCell>
+        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" value="J2" vertex="1">
+          <mxGeometry height="100" width="200" x="50" y="113" as="geometry" />
+        </mxCell>
+        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" value="J3" vertex="1">
+          <mxGeometry height="100" width="200" x="50" y="213" as="geometry" />
+        </mxCell>
+        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" value="J4" vertex="1">
+          <mxGeometry height="100" width="200" x="50" y="313" as="geometry" />
+        </mxCell>
+        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" value="J5 - 05/05" vertex="1">
+          <mxGeometry height="100" width="200" x="50" y="413" as="geometry" />
+        </mxCell>
+        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" value="J6 - 07/05" vertex="1">
+          <mxGeometry height="100" width="200" x="50" y="513" as="geometry" />
+        </mxCell>
+        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" value="J7" vertex="1">
+          <mxGeometry height="100" width="200" x="50" y="613" as="geometry" />
+        </mxCell>
+        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" value="J8 - 10/07" vertex="1">
+          <mxGeometry height="100" width="200" x="50" y="713" as="geometry" />
+        </mxCell>
+        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Rappels Conteneurisation (Docker - Compose - Build)" vertex="1">
+          <mxGeometry height="100" width="560" x="280" y="13" as="geometry" />
+        </mxCell>
+        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Kubernetes - Orchestrateur de Conteneurs" vertex="1">
+          <mxGeometry height="100" width="560" x="280" y="113" as="geometry" />
+        </mxCell>
+        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Kubernetes - Orchestrateur de Conteneurs" vertex="1">
+          <mxGeometry height="100" width="560" x="280" y="213" as="geometry" />
+        </mxCell>
+        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Tests de Performance /&lt;div&gt;Supervision (Prometheus / Grafana)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="560" x="280" y="313" as="geometry" />
+        </mxCell>
+        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Développement Orienté Services" vertex="1">
+          <mxGeometry height="100" width="560" x="280" y="414" as="geometry" />
+        </mxCell>
+        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Déploiement sur Kubernetes + AutoScaling" vertex="1">
+          <mxGeometry height="100" width="560" x="280" y="514" as="geometry" />
+        </mxCell>
+        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Révision + Ealuation" vertex="1">
+          <mxGeometry height="100" width="560" x="280" y="713" as="geometry" />
+        </mxCell>
+        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#fff2cc;strokeColor=#d6b656;" value="Communication par Message(s) / RabbitMQ | Kafka" vertex="1">
+          <mxGeometry height="100" width="560" x="280" y="613" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="pJyFZGMjzSMT1Qt2QmqN" name="Page-2">
+    <mxGraphModel dx="1211" dy="699" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jKEi9a2uHC1yEo7BOcD1-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" value="postgres container#1" vertex="1">
+          <mxGeometry height="210" width="260" x="130" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="jKEi9a2uHC1yEo7BOcD1-2" parent="1" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Docker.svg;" value="" vertex="1">
+          <mxGeometry height="41" width="50" x="110" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="jKEi9a2uHC1yEo7BOcD1-4" edge="1" parent="1" source="jKEi9a2uHC1yEo7BOcD1-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="jKEi9a2uHC1yEo7BOcD1-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jKEi9a2uHC1yEo7BOcD1-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" value="psql container#2" vertex="1">
+          <mxGeometry height="210" width="260" x="630" y="170" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
