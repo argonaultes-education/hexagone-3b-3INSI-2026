@@ -49,7 +49,7 @@ Depuis ce second conteneur, créer une instance postgres comme cela a été fait
 
 ### Vue d'ensemble
 
-![](./schema-exo3.png)
+![](./schema-exo2.png)
 
 ### Solution
 
