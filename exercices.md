@@ -46,3 +46,45 @@ Créer un conteneur basé sur l'image [dind](https://hub.docker.com/_/docker).
 Créer un second conteneur capable de créer des conteneurs invisibles pour la machine hôte en utilisant le conteneur #1.
 
 Depuis ce second conteneur, créer une instance postgres comme cela a été fait dans le 1er exercice.
+
+
+### Solution
+
+1. Créer 2 volumes pour stocker les certificats générés
+
+```bash
+docker volume create docker-certs-ca
+docker volume create docker-certs-client
+```
+
+2. Créer le sous réseau dind_network
+
+```bash
+docker network create dind_network
+```
+
+
+3. Créer un conteneur basé sur l'image docker:dind qui sera rattaché au sous-réseau dind_network
+
+```bash
+docker run --privileged --name docker-daemon -d --network dind_network --network-alias docker -e DOCKER_TLS_CERTDIR=/certs -v docker-certs-ca:/certs/ca -v docker-certs-client:/certs/client docker:dind
+```
+
+
+4. Créer un conteneur possédant le client docker pour créer d'autres conteneurs
+
+```bash
+docker run --rm --network dind_network -e DOCKER_TLS_CERTDIR=/certs -e DOCKER_HOST=tcp://docker:2376 -v docker-certs-client:/certs/client:ro docker:latest version
+```
+
+5. Créer un conteneur de base de données au sein du conteneur client docker
+
+```bash
+docker run -it --rm --network dind_network -e DOCKER_TLS_CERTDIR=/certs -e DOCKER_HOST=tcp://docker:2376 -v docker-certs-client:/certs/client:ro docker:latest sh
+```
+
+Puis créer le conteneur issu de l'exercice 1
+
+```bash
+docker run --name db -d -e POSTGRES_DB=tprevision -e POSTGRES_PASSWORD=password  postgres:latest
+```

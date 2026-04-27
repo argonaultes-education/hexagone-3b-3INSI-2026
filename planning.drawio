@@ -1,4 +1,4 @@
-<mxfile host="Electron" pages="2">
+<mxfile host="Electron" pages="3">
   <diagram name="Page-1" id="xIy0Wb7OQuEjFhtrG6s4">
     <mxGraphModel dx="1417" dy="962" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -55,11 +55,14 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="pJyFZGMjzSMT1Qt2QmqN" name="Page-2">
+  <diagram id="pJyFZGMjzSMT1Qt2QmqN" name="exercice1">
     <mxGraphModel dx="1414" dy="875" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="jKEi9a2uHC1yEo7BOcD1-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=bottom;" value="bridge" vertex="1">
+          <mxGeometry height="390" width="850" x="80" y="70" as="geometry" />
+        </mxCell>
         <mxCell id="jKEi9a2uHC1yEo7BOcD1-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" value="postgres container#1" vertex="1">
           <mxGeometry height="210" width="260" x="130" y="170" as="geometry" />
         </mxCell>
@@ -74,6 +77,79 @@
         </mxCell>
         <mxCell id="jKEi9a2uHC1yEo7BOcD1-5" parent="1" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Docker.svg;" value="" vertex="1">
           <mxGeometry height="41" width="50" x="610" y="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="WHUBiGgFqqsPHxi8NHmm" name="exercice2">
+    <mxGraphModel dx="1414" dy="875" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NMUDRp6YJxdVCAhGYAjb-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=bottom;" value="docker_network" vertex="1">
+          <mxGeometry height="390" width="850" x="170" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="NMUDRp6YJxdVCAhGYAjb-9" edge="1" parent="1" source="NMUDRp6YJxdVCAhGYAjb-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="NMUDRp6YJxdVCAhGYAjb-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NMUDRp6YJxdVCAhGYAjb-10" connectable="0" parent="NMUDRp6YJxdVCAhGYAjb-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="rw" vertex="1">
+          <mxGeometry relative="1" x="-0.1429" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NMUDRp6YJxdVCAhGYAjb-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" value="docker container#1 (dind)" vertex="1">
+          <mxGeometry height="210" width="260" x="220" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="NMUDRp6YJxdVCAhGYAjb-3" parent="1" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Docker.svg;" value="" vertex="1">
+          <mxGeometry height="41" width="50" x="200" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="NMUDRp6YJxdVCAhGYAjb-4" edge="1" parent="1" source="NMUDRp6YJxdVCAhGYAjb-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="NMUDRp6YJxdVCAhGYAjb-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NMUDRp6YJxdVCAhGYAjb-11" edge="1" parent="1" source="NMUDRp6YJxdVCAhGYAjb-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="NMUDRp6YJxdVCAhGYAjb-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="850" y="30" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NMUDRp6YJxdVCAhGYAjb-12" connectable="0" parent="NMUDRp6YJxdVCAhGYAjb-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="read only" vertex="1">
+          <mxGeometry relative="1" x="0.4455" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NMUDRp6YJxdVCAhGYAjb-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" value="docker client container" vertex="1">
+          <mxGeometry height="210" width="260" x="720" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="NMUDRp6YJxdVCAhGYAjb-6" parent="1" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Docker.svg;" value="" vertex="1">
+          <mxGeometry height="41" width="50" x="700" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="NMUDRp6YJxdVCAhGYAjb-7" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" value="/certs" vertex="1">
+          <mxGeometry height="80" width="120" x="290" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="ZcQGUtbDGYwAc86w936K-7" connectable="0" parent="1" style="group;fontSize=8;" value="" vertex="1">
+          <mxGeometry height="60" width="170" x="770" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="ZcQGUtbDGYwAc86w936K-1" parent="ZcQGUtbDGYwAc86w936K-7" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=bottom;" value="bridge" vertex="1">
+          <mxGeometry height="59.999999999999986" width="170" as="geometry" />
+        </mxCell>
+        <mxCell id="ZcQGUtbDGYwAc86w936K-2" parent="ZcQGUtbDGYwAc86w936K-7" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;postgres container#1&lt;/font&gt;" vertex="1">
+          <mxGeometry height="32.3076923076923" width="52" x="10" y="15.38461538461538" as="geometry" />
+        </mxCell>
+        <mxCell id="ZcQGUtbDGYwAc86w936K-3" parent="ZcQGUtbDGYwAc86w936K-7" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Docker.svg;" value="" vertex="1">
+          <mxGeometry height="5.332770270270269" width="6.503378378378378" x="6.000000000000002" y="12.307692307692303" as="geometry" />
+        </mxCell>
+        <mxCell id="ZcQGUtbDGYwAc86w936K-4" edge="1" parent="ZcQGUtbDGYwAc86w936K-7" source="ZcQGUtbDGYwAc86w936K-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="ZcQGUtbDGYwAc86w936K-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZcQGUtbDGYwAc86w936K-5" parent="ZcQGUtbDGYwAc86w936K-7" style="rounded=0;whiteSpace=wrap;html=1;fontSize=8;" value="psql container#2" vertex="1">
+          <mxGeometry height="32.3076923076923" width="52" x="110" y="15.38461538461538" as="geometry" />
+        </mxCell>
+        <mxCell id="ZcQGUtbDGYwAc86w936K-6" parent="ZcQGUtbDGYwAc86w936K-7" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Docker.svg;" value="" vertex="1">
+          <mxGeometry height="5.332770270270269" width="6.503378378378378" x="106" y="12.307692307692303" as="geometry" />
+        </mxCell>
+        <mxCell id="ZcQGUtbDGYwAc86w936K-8" parent="1" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Docker.svg;" value="" vertex="1">
+          <mxGeometry height="41" width="50" x="754" y="373" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
