@@ -185,20 +185,76 @@ Faire évoluer les services pour répondre à une problématique de montée en c
 
 1. Modifier le fichier de configuration nginx `nginx.conf` pour rediriger le traffic vers un ou plusieurs conteneurs du service `admin`
 
+```
 
+user  nginx;
+worker_processes  auto;
+
+error_log  /var/log/nginx/error.log notice;
+pid        /run/nginx.pid;
+
+
+events {
+    worker_connections  1024;
+}
+
+
+stream {
+
+    upstream adminweb {
+        server admin:8080;
+    }
+
+    server {
+        listen 80;
+        proxy_pass adminweb;
+    }
+
+}
+```
 
 2. Créer un nouveau service `lb` qui s'appuie sur l'image `nginx:latest` et qui utilise le fichier modifié de configuration `nginx.conf`
 
-
+```yaml
+  lb:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - '8006:80'
+```
 
 3. Modifier la configuration du service `admin` pour ne plus avoir de redirection de port statique et ainsi permettre la mise à l'échelle (scale) du service `admin`
 
+```yaml
+  admin:
+    image: adminer:latest
+```
 
 4. Modifier le service `lb` pour s'assurer qu'il démarre en dernier : dépendance avec le service `admin` : [`depends_on`](https://docs.docker.com/reference/compose-file/services/#depends_on)
+
+```yaml
+  lb:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - '8006:80'
+    depends_on:
+      - admin
+```
 
 
 5. Modifier le service `admin` pour s'assurer qu'il démarre après le démarrage complet des services de base de données.
 
+```yaml
+  admin:
+    image: adminer:latest
+    depends_on:
+      - hr
+      - crm
+      - erp
+```
 
 # Docker Image
 
