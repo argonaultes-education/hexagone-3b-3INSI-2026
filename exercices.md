@@ -120,18 +120,44 @@ stream {
 
 1. Récupérer le fichier de configuration `nginx.conf`
 
+```bash
+docker run --rm --entrypoint=cat nginx /etc/nginx/nginx.conf > ./nginx.conf
+```
+
 2. Modifier le fichier de configuration `nginx.confg` avec le bloc de code proposé dans l'énoncé
 
 3. Créer un sous réseau tp_exo3
 
-Créer le conteneur nginx avec le nouveau fichier de configuration rattaché au réseau `tp_exo3`
+```bash
+docker network create tp_exo3
+```
+
+4. Créer le conteneur nginx avec le nouveau fichier de configuration rattaché au réseau `tp_exo3`
 
 
-4. Créer un conteneur de base de données postgres avec l'alias DNS `db` rattaché au réseau `tp_exo3`
+```bash
+docker run --name web-bdd --rm -v ./nginx.conf:/etc/nginx/nginx.conf:ro -d nginx
+```
 
+
+1. Créer un conteneur de base de données postgres avec l'alias DNS `db` rattaché au réseau `tp_exo3`
+
+```bash
+docker run --network tp_exo3 --network-alias db --name db -d -e POSTGRES_DB=tp_bdd_3 -e POSTGRES_PASSWORD=password  postgres:latest
+```
+
+```bash
+docker network connect tp_exo3 web-bdd
+docker start web-bdd
+```
 
 Tester la bonne redirection avec l'utilisation d'un client postgres compatible
 
+Récupérer l'adresse IP de votre conteneur
+
+```bash
+docker inspect web-bdd --format='{{.NetworkSettings.Networks.tp_exo3.IPAddress}}'
+```
 
 ```bash
 psql -h localhost -p 8002 -U postgres tp_bdd_3

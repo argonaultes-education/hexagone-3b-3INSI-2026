@@ -164,8 +164,11 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="5gue_rWdNn1walImfr4W-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=bottom;" value="network_exercice3" vertex="1">
-          <mxGeometry height="370" width="850" x="160" y="130" as="geometry" />
+        <mxCell id="5gue_rWdNn1walImfr4W-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=bottom;" value="&lt;div style=&quot;color: rgb(59, 59, 59); background-color: rgb(255, 255, 255); font-family: &amp;quot;Droid Sans Mono&amp;quot;, &amp;quot;monospace&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;&lt;span style=&quot;color: #800000;&quot;&gt;tp_exo3&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="490" width="890" x="160" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uO3NRbf55Mu6DsxNIBhY-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=bottom;" value="&lt;div style=&quot;color: rgb(59, 59, 59); background-color: rgb(255, 255, 255); font-family: &amp;quot;Droid Sans Mono&amp;quot;, &amp;quot;monospace&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;&lt;span style=&quot;color: #800000;&quot;&gt;default&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="370" width="390" x="600" y="130" as="geometry" />
         </mxCell>
         <mxCell id="5gue_rWdNn1walImfr4W-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" value="postgres container#2" vertex="1">
           <mxGeometry height="210" width="260" x="210" y="230" as="geometry" />
@@ -198,7 +201,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5gue_rWdNn1walImfr4W-10" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="dbeaver" vertex="1">
+        <mxCell id="5gue_rWdNn1walImfr4W-10" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="psql local machine" vertex="1">
           <mxGeometry height="60" width="120" x="780" y="630" as="geometry" />
         </mxCell>
       </root>
