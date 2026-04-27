@@ -165,6 +165,8 @@ psql -h localhost -p 8002 -U postgres tp_bdd_3
 
 # Docker Compose
 
+## Exercice 4
+
 Proposer un [docker compose](https://docs.docker.com/compose/) qui doit créer les 4 services suivants :
 
 * service PostgreSQL latest avec la base de données nommée `crm`
@@ -196,3 +198,33 @@ Faire évoluer les services pour répondre à une problématique de montée en c
 
 
 5. Modifier le service `admin` pour s'assurer qu'il démarre après le démarrage complet des services de base de données.
+
+
+# Docker Image
+
+## Exercice 5 Création d'image
+
+Créer une image, via Dockerfile, qui permet, à la création d'un container, d'afficher toutes les combinaisons de code en fonction du nombre de chiffres données en paramètre.
+
+Peut être réalisé en Python.
+
+```bash
+docker run masuperimage:latest 2
+00
+01
+02
+...
+98
+99
+```
+
+```bash
+docker run masuperimage:latest 3
+000
+001
+002
+...
+998
+999
+```
+
