@@ -115,3 +115,24 @@ stream {
 
 }
 ```
+
+### Solution
+
+1. Récupérer le fichier de configuration `nginx.conf`
+
+2. Modifier le fichier de configuration `nginx.confg` avec le bloc de code proposé dans l'énoncé
+
+3. Créer un sous réseau tp_exo3
+
+Créer le conteneur nginx avec le nouveau fichier de configuration rattaché au réseau `tp_exo3`
+
+
+4. Créer un conteneur de base de données postgres avec l'alias DNS `db` rattaché au réseau `tp_exo3`
+
+
+Tester la bonne redirection avec l'utilisation d'un client postgres compatible
+
+
+```bash
+psql -h localhost -p 8002 -U postgres tp_bdd_3
+```
