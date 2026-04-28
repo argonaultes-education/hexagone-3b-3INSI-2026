@@ -28,8 +28,26 @@ minikube kubectl -- get namespace
 minikube dashboard
 ```
 
-## Exercice 1 : Créer un déploiement
+## Exercice 1 : Créer un déploiement (self-healing)
 
 ```bash
 kubectl create deployment deploynginx --image=nginx:latest
+```
+
+Essayer de supprimer le pod déployé
+
+```bash
+kubectl delete pod/deploynginx-
+```
+
+Créer une ressource pod simple
+
+```bash
+kubectl run podnginx --image=nginx:latest
+```
+
+Supprimer le pod podnginx
+
+```bash
+kubectl delete pod/podnginx
 ```
