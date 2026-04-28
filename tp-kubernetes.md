@@ -115,35 +115,88 @@ kubectl rollout undo deployment deploynginx
 
 ## Exercice 3 : 
 
-Créer le déploiement hr-deploy avec 1 pod
+Créer le ~~déploiement~~ pod hr~~-deploy avec 1 pod~~
 
 ```bash
-
+kubectl run hr --env="MYSQL_DATABASE=hr" --env="MYSQL_ROOT_PASSWORD=password" --image=mysql:latest
 ```
 
-Créer le déploiement crm-deploy avec 1 pod
+Tester la connexion en local depuis le pod avec le lancement d'un processus mysql au sein du conteneur associé au pod hr
 
 ```bash
+kubectl exec -it pod/hr -- mysql -u root -p
+```
 
+Créer le ~~déploiement~~ crm~~-deploy avec 1 pod~~
+
+```bash
+kubectl run crm --env="POSTGRES_DB=crm" --env="POSTGRES_PASSWORD=password" --image=postgres:latest
 ```
 
 
-Créer le déploiement erp-deploy avec 1 pod
+Créer le ~~déploiement~~ erp~~-deploy avec 1 pod~~
 
 ```bash
+kubectl run erp --env="POSTGRES_DB=erp" --env="POSTGRES_PASSWORD=password" --image=postgres:latest
+```
 
+Tester la connexion à l'instance postgres
+
+```bash
+kubectl exec -it pod/crm -- psql -U postgres
 ```
 
 
 Créer le déploiement admin-deploy avec 3 pods
 
 ```bash
-
+kubectl create deployment admin-deploy --image=adminer:latest --replicas=3
 ```
 
 
 Accéder aux bases de données en passant par le proxy
 
 ```bash
+kubectl proxy
+```
 
+Accéder à l'interface via l'adresse http://localhost:8001/api/v1/namespaces/default/pods/admin-deploy-84f8d4946f-wch77:8080/proxy/
+
+Récupérer l'adresse IP du conteneur d'un POD
+
+```bash
+kubectl describe pod/crm
+```
+
+Créer un service qui expose le déploiement admin-deploy
+
+```bash
+kubectl expose deployment admin-deploy --port=8080
+```
+
+Créer l'image et la tagger avec le repo disponible sur dockerhub
+
+```bash
+cd exercice4
+docker build -t lb-nginx:latest .
+docker image tag lb-nginx:latest argonaulteshexagone/nginxlb:latest
+docker push argonaulteshexagone/nginxlb:latest
+```
+
+Utiliser cette image sur le registre public pour créer un déploiement basé sur cette nouvelle image
+
+```bash
+kubectl create deployment nginxlb --image=argonaulteshexagone/nginxlb:latest --replicas=2
+```
+
+Détruire le service avec l'ancien nom
+
+```bash
+kubectl delete svc/admin-deploy
+```
+
+Recréer avec le nom adapté
+
+```bash
+kubectl expose deployment admin-deploy --name admin --port=8080
 ```
