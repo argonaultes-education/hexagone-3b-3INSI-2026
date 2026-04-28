@@ -26,11 +26,13 @@ services:
       - erp
 
   lb:
-    image: nginx:latest
+    image: lb-nginx
+    build:
+      dockerfile: Dockerfile
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     ports:
-      - '8006:80'
+      - '8006:90'
     depends_on:
       - admin
 
