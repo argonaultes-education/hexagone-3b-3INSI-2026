@@ -207,4 +207,22 @@ Créer un service pour chaque base
 
 ```bash
 kubectl expose pod erp --name svc-erp --port=5432
+kubectl expose pod crm --name svc-crm --port=5432
+kubectl expose pod hr --name svc-hr --port=3306
 ```
+
+Attention à l'utilisation de plusieurs pods pour deploy-admin, il n'y a pas d'affinité par session et donc à chaque requête la session est potentiellement perdu.
+
+Créer un service de type NodePort
+
+```bash
+kubectl expose deployment nginxlb --name svc-nginxlb --port=90 --type=No
+dePort
+```
+
+Pour finir, exposer le service à l'extérieur du cluster minikube avec la commande
+
+```bash
+minikube service svc-nginxlb
+```
+
