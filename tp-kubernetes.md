@@ -112,3 +112,38 @@ Défaire la dernière action compatible rollout
 ```bash
 kubectl rollout undo deployment deploynginx
 ```
+
+## Exercice 3 : 
+
+Créer le déploiement hr-deploy avec 1 pod
+
+```bash
+
+```
+
+Créer le déploiement crm-deploy avec 1 pod
+
+```bash
+
+```
+
+
+Créer le déploiement erp-deploy avec 1 pod
+
+```bash
+
+```
+
+
+Créer le déploiement admin-deploy avec 3 pods
+
+```bash
+
+```
+
+
+Accéder aux bases de données en passant par le proxy
+
+```bash
+
+```
