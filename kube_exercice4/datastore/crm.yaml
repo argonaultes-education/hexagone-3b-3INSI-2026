@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crm-deployment
+spec:
+  selector:
+    matchLabels:
+      app: crm
+      tiers: bdd
+  template:
+    metadata:
+      name: crm
+      labels:
+        app: crm
+        tiers: bdd
+    spec:
+      containers:
+        - name: crm
+          image: postgres:latest
+          env:
+            - name: POSTGRES_DB
+              value: crm
+            - name: POSTGRES_PASSWORD
+              value: password
+          ports:
+            - containerPort: 5432
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: crm
+spec:
+  selector:
+    app: crm
+    tiers: bdd
+  ports:
+    - protocol: TCP
+      port: 5432

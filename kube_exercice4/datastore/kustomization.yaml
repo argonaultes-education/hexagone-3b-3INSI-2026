@@ -1,0 +1,7 @@
+resources:
+  - erp.yaml
+  - hr.yaml
+  - crm.yaml
+  - admin.yaml
+  - nginxlb.yaml
+
