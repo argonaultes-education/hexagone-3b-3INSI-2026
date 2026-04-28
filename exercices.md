@@ -288,6 +288,9 @@ docker run masuperimage:latest 3
 
 Construire l'image
 
+```bash
+docker build -t masuperimage:latest .
+```
 
 Tester la création et l'exécution du conteneur
 
