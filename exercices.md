@@ -264,6 +264,8 @@ Créer une image, via Dockerfile, qui permet, à la création d'un container, d'
 
 Peut être réalisé en Python.
 
+Pensez à relire la documentation de [référence de Dockerfile](https://docs.docker.com/reference/dockerfile/).
+
 ```bash
 docker run masuperimage:latest 2
 00
@@ -284,3 +286,11 @@ docker run masuperimage:latest 3
 999
 ```
 
+Construire l'image
+
+
+Tester la création et l'exécution du conteneur
+
+```bash
+docker run masuperimage:latest 2
+```
