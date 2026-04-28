@@ -115,6 +115,8 @@ kubectl rollout undo deployment deploynginx
 
 ## Exercice 3 : 
 
+![](./schema-kubernetes-01.png)
+
 Créer le ~~déploiement~~ pod hr~~-deploy avec 1 pod~~
 
 ```bash
