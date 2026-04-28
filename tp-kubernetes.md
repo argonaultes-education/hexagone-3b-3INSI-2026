@@ -226,3 +226,18 @@ Pour finir, exposer le service à l'extérieur du cluster minikube avec la comma
 minikube service svc-nginxlb
 ```
 
+## Exercice 4 :
+
+Convertir en fichier yaml les instructions impératives de l'exercice #3.
+
+Pour récupérer la définition d'une ressource existante au format yaml
+
+```bash
+kubectl get pod/hr -o yaml
+```
+
+Commade pour appliquer les fichiers déclaratifs
+
+```bash
+kubectl apply -f pod0.yaml
+```
