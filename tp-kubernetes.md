@@ -117,7 +117,7 @@ kubectl rollout undo deployment deploynginx
 
 ![](./schema-kubernetes-01.png)
 
-Créer le ~~déploiement~~ pod hr~~-deploy avec 1 pod~~
+Créer le ~~déploiement~~ pod hr ~~-deploy avec 1 pod~~
 
 ```bash
 kubectl run hr --env="MYSQL_DATABASE=hr" --env="MYSQL_ROOT_PASSWORD=password" --image=mysql:latest
@@ -129,14 +129,14 @@ Tester la connexion en local depuis le pod avec le lancement d'un processus mysq
 kubectl exec -it pod/hr -- mysql -u root -p
 ```
 
-Créer le ~~déploiement~~ crm~~-deploy avec 1 pod~~
+Créer le ~~déploiement~~ crm ~~-deploy avec 1 pod~~
 
 ```bash
 kubectl run crm --env="POSTGRES_DB=crm" --env="POSTGRES_PASSWORD=password" --image=postgres:latest
 ```
 
 
-Créer le ~~déploiement~~ erp~~-deploy avec 1 pod~~
+Créer le ~~déploiement~~ erp ~~-deploy avec 1 pod~~
 
 ```bash
 kubectl run erp --env="POSTGRES_DB=erp" --env="POSTGRES_PASSWORD=password" --image=postgres:latest
@@ -201,4 +201,10 @@ Recréer avec le nom adapté
 
 ```bash
 kubectl expose deployment admin-deploy --name admin --port=8080
+```
+
+Créer un service pour chaque base
+
+```bash
+kubectl expose pod erp --name svc-erp --port=5432
 ```
