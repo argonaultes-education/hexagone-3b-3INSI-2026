@@ -245,3 +245,12 @@ Commade pour appliquer les fichiers déclaratifs
 ```bash
 kubectl apply -f pod0.yaml
 ```
+
+Commande pour appliquer un dossier kustomization
+
+
+```bash
+kubectl apply -k folder
+```
+
+```
