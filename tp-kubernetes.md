@@ -1,5 +1,9 @@
 # Kubernetes
 
+## Vue d'ensemble
+
+![](./schema-kubernetes-overview.png)
+
 ## Installation
 
 Minikube
