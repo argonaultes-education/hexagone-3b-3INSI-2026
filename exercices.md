@@ -297,3 +297,11 @@ Tester la création et l'exécution du conteneur
 ```bash
 docker run masuperimage:latest 2
 ```
+
+## Exercice 6 Consolidation des connaissances
+
+Le projet de départ est disponible sur [github](https://github.com/argonaultes-education/todos-api.git).
+
+Question complémentaire : Comment faire pour qu'un pod non issu du déploiement `todo` soit quand même servi par le service `todo` ?
+
+![](./schema-kubernetes-exercice-todo.png)
