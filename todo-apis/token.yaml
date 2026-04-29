@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tokens
+data:
+  API_TOKEN: tokendeploy
+  API_TOKEN_SOLO: tokensolo

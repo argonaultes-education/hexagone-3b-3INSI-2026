@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: todo-api
+  labels:
+    app: todo-api
+    tiers: hansolo
+spec:
+  containers:
+    - name: todo-api
+      image: todo-api-hexagone:2026
+      ports:
+        - containerPort: 3002
+      env:
+        - name: API_TOKEN
+          valueFrom:
+            configMapKeyRef:
+              name: tokens
+              key: API_TOKEN_SOLO
+              optional: true
