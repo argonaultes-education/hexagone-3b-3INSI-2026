@@ -275,6 +275,12 @@ kubectl get configmap db-names -o jsonpath='{.data.HR_DB}'
 
 Pour créer une ressource configmap en yaml
 
-```bash
-
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-names
+data:
+  HR_DB: human_resources
 ```
+
