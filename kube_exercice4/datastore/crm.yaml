@@ -19,7 +19,11 @@ spec:
           image: postgres:latest
           env:
             - name: POSTGRES_DB
-              value: crm
+              valueFrom:
+                configMapKeyRef:
+                  name: db-names
+                  key: CRM_DB
+                  optional: true
             - name: POSTGRES_PASSWORD
               value: password
           ports:

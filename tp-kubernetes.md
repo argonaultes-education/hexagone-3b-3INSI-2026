@@ -253,4 +253,28 @@ Commande pour appliquer un dossier kustomization
 kubectl apply -k folder
 ```
 
+## Exercice 5 : ConfigMap et Secret
+
+Pour créer une ressource configmap depuis la CLI
+
+```bash
+kubectl create configmap db-names --from-literal HR_DB=hr
+```
+
+Et la même commande avec plusieurs variables créées.
+
+```bash
+kubectl create configmap db-names --from-literal=HR_DB=hr --from-literal=CRM_DB=crm --from-literal=ERP_DB=erp
+```
+
+Pour obtenir la valaeur d'un configmap
+
+```bash
+kubectl get configmap db-names -o jsonpath='{.data.HR_DB}'
+```
+
+Pour créer une ressource configmap en yaml
+
+```bash
+
 ```

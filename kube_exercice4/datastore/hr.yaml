@@ -19,7 +19,11 @@ spec:
           image: mysql:latest
           env:
             - name: MYSQL_DATABASE
-              value: hr
+              valueFrom:
+                configMapKeyRef:
+                  name: db-names
+                  key: HR_DB
+                  optional: true
             - name: MYSQL_ROOT_PASSWORD
               value: password
           ports:
