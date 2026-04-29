@@ -284,3 +284,17 @@ data:
   HR_DB: human_resources
 ```
 
+## Exercice : Manipulation des volumes
+
+
+Créer et rattacher un volume local à un pod simple nginx
+
+Voir le fichier [podvol.yaml](./kube_volumes/podvol.yaml)
+
+Créer et rattacher un pvc à un pod
+
+Voir le fichier [podpvc.yaml](./kube_volumes/podpvc.yaml)
+
+Déclarer des templates de volume (pvc) à associer à des templates de pod
+
+Voir le fichier [deploypvc.yaml](./kube_volumes/deploypvc.yaml)

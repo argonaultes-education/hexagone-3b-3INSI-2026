@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: deploypvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploypvc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deploypvc
+  template:
+    metadata:
+      name: deploypvc
+      labels:
+        app: deploypvc
+    spec:
+      volumes:
+        - name: monsupervolume
+          persistentVolumeClaim:
+            claimName: deploypvc
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: monsupervolume
+              mountPath: /opt/monsupervol
+      
