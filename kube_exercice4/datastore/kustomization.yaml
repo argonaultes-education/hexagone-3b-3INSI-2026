@@ -1,4 +1,5 @@
 resources:
+  - dbnames.yaml
   - erp.yaml
   - hr.yaml
   - crm.yaml

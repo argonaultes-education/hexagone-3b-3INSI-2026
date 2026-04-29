@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-names
+data:
+  HR_DB: human_resources
+  CRM_DB: crm
+  ERP_DB: erp
