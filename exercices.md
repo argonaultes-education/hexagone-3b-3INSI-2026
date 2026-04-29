@@ -305,3 +305,5 @@ Le projet de départ est disponible sur [github](https://github.com/argonaultes-
 Question complémentaire : Comment faire pour qu'un pod non issu du déploiement `todo` soit quand même servi par le service `todo` ?
 
 ![](./schema-kubernetes-exercice-todo.png)
+
+Afficher sur la page web la valeur d'un token dont la définition est stockée dans une configmap.
