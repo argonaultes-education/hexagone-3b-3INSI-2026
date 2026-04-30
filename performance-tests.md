@@ -76,3 +76,33 @@ Ajouter les variables d'environnement pour augmenter le nombre de boucles et exp
 ```bash
 docker run -e NB_LOOPS=2 -e K6_WEB_DASHBOARD=true -e K6_WEB_DASHBOARD_EXPORT=/performance/output/html-report.html --network todoapi_network --rm -t -v ./performance/:/performance/ grafana/k6 run --vus 10 --duration 30s /performance/script.js
 ```
+
+## Apache JMeter
+
+### Prérequis
+
+Vérifier que Java 8+ est disponible
+
+```bash
+java -version
+```
+
+### Installation
+
+Télécharger et extraire les composantes de l'archive
+
+```bash
+wget https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.6.3.tgz
+```
+
+Extraire le composants
+
+```bash
+tar -xzf apache-jmeter-5.6.3.tgz
+```
+
+Aller dans le dossier `./apache-jmeter-5.6.3/bin/` et lancer le script
+
+```bash
+./jmeter
+```
