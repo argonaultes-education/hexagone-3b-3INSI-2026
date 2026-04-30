@@ -37,20 +37,23 @@
         <mxCell id="ihJmQ2Xfq3aGppGtk-gM-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#d5e8d4;strokeColor=#82b366;" value="Kubernetes - Orchestrateur de Conteneurs" vertex="1">
           <mxGeometry height="100" width="560" x="280" y="213" as="geometry" />
         </mxCell>
-        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Tests de Performance /&lt;div&gt;Supervision (Prometheus / Grafana)&lt;/div&gt;" vertex="1">
+        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Tests de Performance" vertex="1">
           <mxGeometry height="100" width="560" x="280" y="313" as="geometry" />
         </mxCell>
         <mxCell id="ihJmQ2Xfq3aGppGtk-gM-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Développement Orienté Services" vertex="1">
-          <mxGeometry height="100" width="560" x="280" y="414" as="geometry" />
+          <mxGeometry height="100" width="560" x="280" y="513" as="geometry" />
         </mxCell>
         <mxCell id="ihJmQ2Xfq3aGppGtk-gM-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Déploiement sur Kubernetes + AutoScaling" vertex="1">
-          <mxGeometry height="100" width="560" x="280" y="514" as="geometry" />
+          <mxGeometry height="100" width="230" x="280" y="613" as="geometry" />
         </mxCell>
         <mxCell id="ihJmQ2Xfq3aGppGtk-gM-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Révision + Ealuation" vertex="1">
           <mxGeometry height="100" width="560" x="280" y="713" as="geometry" />
         </mxCell>
         <mxCell id="ihJmQ2Xfq3aGppGtk-gM-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#fff2cc;strokeColor=#d6b656;" value="Communication par Message(s) / RabbitMQ | Kafka" vertex="1">
-          <mxGeometry height="100" width="560" x="280" y="613" as="geometry" />
+          <mxGeometry height="100" width="330" x="510" y="613" as="geometry" />
+        </mxCell>
+        <mxCell id="KuH6dThMcQorH1KoL7Zl-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Tests de Performance /&lt;div&gt;Supervision (Prometheus / Grafana)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="560" x="280" y="414" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -1034,7 +1037,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Fh09zRvZX6dkYZ-svewN" name="Page-11">
-    <mxGraphModel dx="393" dy="243" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="673" dy="417" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
