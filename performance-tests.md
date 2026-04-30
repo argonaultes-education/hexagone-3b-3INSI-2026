@@ -26,10 +26,16 @@ Construire en l'image en ayant effectué les modificaitons nécessaires
 docker build -t todo-api-hexagone:2026 .
 ```
 
+Créer le sous-réseau
+
+```bash
+docker network create todoapi_network
+```
+
 Démarrer le conteneur
 
 ```bash
-docker run -d --name todo-api --rm -p 3002:3002 --cpus 2 --memory 4G --memory-swap 4G argonaulteshexagone/todo-api-hexagone:2026
+docker run -d --network todoapi_network --network-alias todoapi --name todo-api --rm -p 3002:3002 --cpus 2 --memory 4G --memory-swap 4G argonaulteshexagone/todo-api-hexagone:2026
 ```
 
 ## k6
@@ -54,5 +60,11 @@ docker pull grafana/k6
 Démarrer notre script
 
 ```bash
-docker run ... grafana/k6 k6 run script.js
+docker run --network todoapi_network --rm -t -v ./performance/:/performance/ grafana/k6 run /performance/script.js
+```
+
+Augmenter la durée du test et le nombre d'utilisateurs
+
+```bash
+docker run --network todoapi_network --rm -t -v ./performance/:/performance/ grafana/k6 run --vus 10 --duration 30s /performance/script.js
 ```
