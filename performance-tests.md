@@ -126,3 +126,40 @@ Attention, cette commande crée les ressources suivantes :
 * `performance/output/testplan.log`
 * `jmeter.log`
 
+## Nouveau système soumis à des tests
+
+Application avec une page qui présentera un formulaire demandant un titre de jeu.
+
+L'application présentera le nombre de fois que ce jeu a été renseigné.
+
+### Marche à suivre pour la création du projet
+
+Initialiser le projet
+
+```bash
+uv init --bare .
+```
+
+Ajouter le module flask au projet
+
+```bash
+uv add flask
+```
+
+Modifier les scripts, etc...
+
+Démarrer le serveur en utilisant comme script d'entrée le fichier `main.py`
+
+```bash
+uv run flask --app main run --debug
+```
+
+### Exercice 1
+
+Créer 1 script js avec JMeter qui suit le scénario :
+
+1. afficher la page contenant l'input
+2. envoyer une valeur de jeu prise au hasard parmi une liste prédéfinie
+3. vérifier que la réponse contient la valeur envoyée ainsi que la valeur de `count` > 0
+
+Faire le même script avec k6
