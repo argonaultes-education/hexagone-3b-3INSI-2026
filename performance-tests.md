@@ -106,3 +106,23 @@ Aller dans le dossier `./apache-jmeter-5.6.3/bin/` et lancer le script
 ```bash
 ./jmeter
 ```
+
+Rendre accessible depuis le PATH les scripts jmeter
+
+```bash
+export PATH=/datadisk/apache-jmeter-5.6.3/bin:$PATH
+```
+
+
+Lancer le script avec la commande
+
+```bash
+jmeter -n -t performance/testplan.jmx -l performance/output/testplan.log -e
+```
+
+Attention, cette commande crée les ressources suivantes :
+
+* `report-output/statistics.json`
+* `performance/output/testplan.log`
+* `jmeter.log`
+
