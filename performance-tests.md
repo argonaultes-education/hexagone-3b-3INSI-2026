@@ -66,5 +66,11 @@ docker run --network todoapi_network --rm -t -v ./performance/:/performance/ gra
 Augmenter la durée du test et le nombre d'utilisateurs
 
 ```bash
-docker run --network todoapi_network --rm -t -v ./performance/:/performance/ grafana/k6 run --vus 10 --duration 30s /performance/script.js
+docker run --network todoapi_network --rm -t -v "${pwd}/performance/:/performance/" grafana/k6 run --vus 10 --duration 30s /performance/script.js
+```
+
+Ajouter les variables d'environnement pour augmenter le nombre de boucles et exporter les résultats ous forme de tableau de bord
+
+```bash
+docker run -e NB_LOOPS=2 -e K6_WEB_DASHBOARD=true -e K6_WEB_DASHBOARD_EXPORT=/performance/output/html-report.html --network todoapi_network --rm -t -v ./performance/:/performance/ grafana/k6 run --vus 10 --duration 30s /performance/script.js
 ```
