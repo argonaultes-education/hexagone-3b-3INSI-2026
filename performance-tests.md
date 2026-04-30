@@ -29,7 +29,7 @@ docker build -t todo-api-hexagone:2026 .
 Démarrer le conteneur
 
 ```bash
-docker run -d --name todo-api --rm -p 3002:3002 --cpus 2 --memory 4G --memory-swap 4G todo-api-hexagone:2026
+docker run -d --name todo-api --rm -p 3002:3002 --cpus 2 --memory 4G --memory-swap 4G argonaulteshexagone/todo-api-hexagone:2026
 ```
 
 ## k6
@@ -54,5 +54,5 @@ docker pull grafana/k6
 Démarrer notre script
 
 ```bash
-k6 run script.js
+docker run ... grafana/k6 k6 run script.js
 ```
