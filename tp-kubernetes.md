@@ -295,6 +295,36 @@ Créer et rattacher un pvc à un pod
 
 Voir le fichier [podpvc.yaml](./kube_volumes/podpvc.yaml)
 
-Déclarer des templates de volume (pvc) à associer à des templates de pod
+Déclarer des demandes de volume (pvc) à associer à des templates de pod
 
 Voir le fichier [deploypvc.yaml](./kube_volumes/deploypvc.yaml)
+
+Déclarer des nouvelles créations de volumes à chaque nouvelle création de pod
+
+Voir le fichier [deploypvctemplate.yaml](./kube_volumes/deploypvctemplate.yaml)
+
+Quelques commandes pour manipuler les pods
+
+Lancer un nouveau processus bash interactif dans le pod deploypvctemplate-0
+
+```bash
+kubectl exec -it pod/deploypvctemplate-0 -- bash
+```
+
+Garder un oeil sur la liste des pods
+
+```bash
+kubectl get pods -l app=deploypvc --watch
+```
+
+Augmenter le nombre de replicas d'un statefulset
+
+```bash
+kubectl scale statefulset deploypvctemplate --replicas=3
+```
+
+Supprimer un pod
+
+```bash
+kubectl delete pod/deploypvctemplate-0
+```

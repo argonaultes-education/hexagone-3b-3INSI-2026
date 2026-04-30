@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: deploypvctemplate
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deploypvc
+  volumeClaimTemplates:
+    - metadata:
+        name: monsupervolume
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
+  template:
+    metadata:
+      name: deploypvc
+      labels:
+        app: deploypvc
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: monsupervolume
+              mountPath: /opt/monsupervol
+      
