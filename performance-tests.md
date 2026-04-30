@@ -175,4 +175,18 @@ Une fois le script réalisée, lancer le test avec 10 utilisateurs pour 10 itér
 jmeter -n -t performance/testplan-sut.jmx -Jthreads=10 -Jrampup=10 -Jloopcount_thread=10 -Jloopid=2 -l performance/output/testplan-sut.log -e
 ```
 
+Rajouter dans la sortie du script jmeter le label utilisé pour le jeu
+
+Aprè avoir créé l'image format dev de l'application,
+
+```bash
+docker build -t hexagone-sut:2026 .
+```
+
+Créer un conteneur avec des ressources limités
+
+```bash
+docker run -p 5000:5000 --rm --cpus 4 --memory 2G --memory-swap 2G hexagone-sut:2026
+```
+
 Faire le même script avec k6
