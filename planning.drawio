@@ -1034,7 +1034,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Fh09zRvZX6dkYZ-svewN" name="Page-11">
-    <mxGraphModel dx="566" dy="350" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="975" dy="603" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1049,6 +1049,14 @@
         </mxCell>
         <mxCell id="BrqHIf_wGu27Id3gvLqZ-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="3002:3002" vertex="1">
           <mxGeometry height="30" width="250" x="310" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="BrqHIf_wGu27Id3gvLqZ-11" edge="1" parent="1" source="BrqHIf_wGu27Id3gvLqZ-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="BrqHIf_wGu27Id3gvLqZ-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BrqHIf_wGu27Id3gvLqZ-12" connectable="0" parent="BrqHIf_wGu27Id3gvLqZ-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="bind mounting read write" vertex="1">
+          <mxGeometry relative="1" x="-0.0867" y="3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="BrqHIf_wGu27Id3gvLqZ-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" value="k6" vertex="1">
           <mxGeometry height="160" width="250" x="730" y="290" as="geometry" />
@@ -1066,6 +1074,9 @@
           <mxGeometry relative="1" x="-0.1765" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="BrqHIf_wGu27Id3gvLqZ-10" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" value="/performance" vertex="1">
+          <mxGeometry height="80" width="120" x="795" y="610" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
