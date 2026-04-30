@@ -154,6 +154,13 @@ Démarrer le serveur en utilisant comme script d'entrée le fichier `main.py`
 uv run flask --app main run --debug
 ```
 
+Si besoin, pour extraire la liste des dépendances au format requirements
+
+```bash
+uv export --format requirements-txt > requirements.txt
+```
+
+
 ### Exercice 1
 
 Créer 1 script js avec JMeter qui suit le scénario :
@@ -161,5 +168,11 @@ Créer 1 script js avec JMeter qui suit le scénario :
 1. afficher la page contenant l'input
 2. envoyer une valeur de jeu prise au hasard parmi une liste prédéfinie
 3. vérifier que la réponse contient la valeur envoyée ainsi que la valeur de `count` > 0
+
+Une fois le script réalisée, lancer le test avec 10 utilisateurs pour 10 itérations et 2 itérations par thread
+
+```bash
+jmeter -n -t performance/testplan-sut.jmx -Jthreads=10 -Jrampup=10 -Jloopcount_thread=10 -Jloopid=2 -l performance/output/testplan-sut.log -e
+```
 
 Faire le même script avec k6
