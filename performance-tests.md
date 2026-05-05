@@ -210,3 +210,12 @@ Réaliser un scénario de test de performance qui reprend les actions suivantes 
 9. envoie d'une requête sql de sélection des lignes existantes dans la table : `select * from test_table_threadid`
 10. déconnexion
 
+Rendre le script dynamique pour permettre la navigation sur les 3 bases de données avec différents utilisateurs.
+
+Initialiser les bases de données avec dix utilisateurs allant de `user1` à `user10` et le mot de passe `password1` à `password10`.
+
+Consulter la [documentation Postgres](https://www.postgresql.org/docs/18/sql-createrole.html) pour la création de nouveaux utilisateurs.
+
+```sql
+CREATE ROLE user1 WITH LOGIN CONNECTION LIMIT 2 PASSWORD 'password1';
+```
