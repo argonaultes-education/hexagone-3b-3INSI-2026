@@ -2,10 +2,25 @@ services:
     prometheus:
       image: prom/prometheus:latest
       volumes:
-          - prometheus-data:/prometheus
-          - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+        - prometheus-data:/prometheus
+        - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
       ports:
-          - "9090:9090"
+        - "9090:9090"
+
+    grafana:
+      image: grafana/grafana-enterprise
+      volumes:
+        - grafana-data:/var/lib/grafana
+      ports:
+        - "3000:3000"
+
+    db_to_monitor:
+      image: postgres:latest
+      environment:
+        - POSTGRES_PASSWORD=password
+    
+
 
 volumes:
     prometheus-data:
+    grafana-data:

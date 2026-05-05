@@ -75,13 +75,29 @@ Convertir en fichier compose
 ```yaml
 services:
     prometheus:
-        image: prom/prometheus:latest
-    volumes:
-        - prometheus-data:/prometheus
-        - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
-    ports:
-        - "9090:9090"
+      image: prom/prometheus:latest
+      volumes:
+          - prometheus-data:/prometheus
+          - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      ports:
+          - "9090:9090"
 
 volumes:
     prometheus-data:
+```
+
+## Grafana
+
+### Installation et premiers pas
+
+Démarrer un conteneur basé sur l'image grafana
+
+```bash
+docker run -d -p 3000:3000 --network monitoring_default --name=grafana grafana/grafana-enterprise
+```
+
+Connecter le conteneur actif grafana au réseau `monitoring_default`
+
+```bash
+docker network connect monitoring_default grafana
 ```
