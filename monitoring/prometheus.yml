@@ -32,3 +32,9 @@ scrape_configs:
         labels:
           app: "prometheus"
           city: "Versailles"
+  - job_name: "db_to_monitor"
+    static_configs:
+      - targets: ["db_to_monitor:5432"]
+        labels:
+          app: "db"
+          engine: "postgres"

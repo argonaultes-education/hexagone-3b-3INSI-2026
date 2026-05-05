@@ -101,3 +101,9 @@ Connecter le conteneur actif grafana au réseau `monitoring_default`
 ```bash
 docker network connect monitoring_default grafana
 ```
+
+### Ajouter target postgres
+
+![](./images/schema-monitoring-grafana-pg.drawio.png)
+
+Utiliser [PostgreSQLExporter](https://github.com/prometheus-community/postgres_exporter)
