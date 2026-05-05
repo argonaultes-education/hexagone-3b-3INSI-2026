@@ -202,12 +202,12 @@ Réaliser un scénario de test de performance qui reprend les actions suivantes 
 1. affichage de la page de connexion de adminer
 2. saisie des identifiants de connexion à la base erp
 3. affichage de la page de saisie de requête sql
-4. envoie d'une requête sql de création de tables `create table test_table_threadid(id serial primary key)`
-5. envoie d'une requête sql d'insertion de données  `insert into test_table_threadid default values`
+4. envoie d'une requête sql de création de tables `create table if not exists test_table_$threadid(id serial primary key)`
+5. envoie d'une requête sql d'insertion de données  `insert into test_table_$threadid default values`
 6. déconnexion
 7. reconnexion
 8. affichage de la saisie sql
-9. envoie d'une requête sql de sélection des lignes existantes dans la table : `select * from test_table_threadid`
+9. envoie d'une requête sql de sélection des lignes existantes dans la table : `select * from test_table_$threadid` : vérifier que le nombre de lignes renvoyées est strictement supérieur à 1
 10. déconnexion
 
 Rendre le script dynamique pour permettre la navigation sur les 3 bases de données avec différents utilisateurs.
