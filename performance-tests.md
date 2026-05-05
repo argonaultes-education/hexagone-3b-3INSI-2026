@@ -218,4 +218,5 @@ Consulter la [documentation Postgres](https://www.postgresql.org/docs/18/sql-cre
 
 ```sql
 CREATE ROLE user1 WITH LOGIN CONNECTION LIMIT 2 PASSWORD 'password1';
+GRANT CREATE ON SCHEMA public TO user1;
 ```
