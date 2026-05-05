@@ -8,7 +8,7 @@ Le second conteneur doit être éphèmère - donc détruit à la fin de son exé
 
 L'accès depuis le second conteneur au conteneur de l'instance doit se faire via un alias DNS exclusivement.
 
-![](./schema-exo1.png)
+![](./images/schema-exo1.png))
 
 ### Solution
 
@@ -49,7 +49,7 @@ Depuis ce second conteneur, créer une instance postgres comme cela a été fait
 
 ### Vue d'ensemble
 
-![](./schema-exo2.png)
+![](./images/schema-exo2.png))
 
 ### Solution
 
@@ -97,7 +97,7 @@ docker run --name db -d -e POSTGRES_DB=tprevision -e POSTGRES_PASSWORD=password 
 
 Utiliser l'image nginx pour créer un conteneur principal accessible sur le port 8002 depuis la machine hôte qui redirige le trafic vers une instance de base de données postgres.
 
-![](./schema-exo3.png)
+![](./images/schema-exo3.png))
 
 Configurer nginx et notamment le fichier nginx.conf pour qu'il intègre l'utilisation du block
 
@@ -176,11 +176,11 @@ Proposer un [docker compose](https://docs.docker.com/compose/) qui doit créer l
 
 Le mot de passe par défaut est `password`.
 
-![](./schema-exo4.png)
+![](./images/schema-exo4.png))
 
 Faire évoluer les services pour répondre à une problématique de montée en charge
 
-![](./schema-exo4-load-balancer.png)
+![](./images/schema-exo4-load-balancer.png))
 
 
 1. Modifier le fichier de configuration nginx `nginx.conf` pour rediriger le traffic vers un ou plusieurs conteneurs du service `admin`
@@ -304,7 +304,7 @@ Le projet de départ est disponible sur [github](https://github.com/argonaultes-
 
 Question complémentaire : Comment faire pour qu'un pod non issu du déploiement `todo` soit quand même servi par le service `todo` ?
 
-![](./schema-kubernetes-exercice-todo.png)
+![](./images/schema-kubernetes-exercice-todo.png))
 
 Afficher sur la page web la valeur d'un token dont la définition est stockée dans une configmap.
 

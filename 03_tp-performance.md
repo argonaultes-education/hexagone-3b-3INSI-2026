@@ -40,7 +40,7 @@ docker run -d --network todoapi_network --network-alias todoapi --name todo-api 
 
 ## k6
 
-![](./perf-1-k6.png)
+![](./images/perf-1-k6.png))
 
 Démarrer k6 et créer un nouveau fichier en se basant sur la [documentation](https://grafana.com/docs/k6/latest/using-k6/http-requests/).
 

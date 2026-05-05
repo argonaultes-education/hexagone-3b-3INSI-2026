@@ -67,11 +67,21 @@ docker volume create prometheus-data
 ```
 
 ```bash
-docker run run -v ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro -p 9090:9090 -v prometheus-data:/prometheus --rm -d prom/prometheus
+docker run -v ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro -p 9090:9090 -v prometheus-data:/prometheus --rm -d prom/prometheus
 ```
 
 Convertir en fichier compose
 
 ```yaml
+services:
+    prometheus:
+        image: prom/prometheus:latest
+    volumes:
+        - prometheus-data:/prometheus
+        - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    ports:
+        - "9090:9090"
 
+volumes:
+    prometheus-data:
 ```

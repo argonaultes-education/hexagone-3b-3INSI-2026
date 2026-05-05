@@ -2,7 +2,7 @@
 
 ## Vue d'ensemble
 
-![](./schema-kubernetes-overview.png)
+![](./images/schema-kubernetes-overview.png))
 
 ## Installation
 
@@ -119,7 +119,7 @@ kubectl rollout undo deployment deploynginx
 
 ## Exercice 3 : 
 
-![](./schema-kubernetes-01.png)
+![](./images/schema-kubernetes-01.png))
 
 Créer le ~~déploiement~~ pod hr ~~-deploy avec 1 pod~~
 
