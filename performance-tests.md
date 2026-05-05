@@ -163,7 +163,7 @@ uv export --format requirements-txt > requirements.txt
 
 ### Exercice 1
 
-Créer 1 script js avec JMeter qui suit le scénario :
+Créer 1 script, au format XML (JMX), avec JMeter qui suit le scénario :
 
 1. afficher la page contenant l'input
 2. envoyer une valeur de jeu prise au hasard parmi une liste prédéfinie
@@ -203,9 +203,10 @@ Réaliser un scénario de test de performance qui reprend les actions suivantes 
 2. saisie des identifiants de connexion à la base erp
 3. affichage de la page de saisie de requête sql
 4. envoie d'une requête sql de création de tables `create table test_table_threadid(id serial primary key)`
-5. envoie d'une requête sql d'insertion de données  `insert into test_table_threadid() values ();`
+5. envoie d'une requête sql d'insertion de données  `insert into test_table_threadid default values`
 6. déconnexion
 7. reconnexion
 8. affichage de la saisie sql
 9. envoie d'une requête sql de sélection des lignes existantes dans la table : `select * from test_table_threadid`
 10. déconnexion
+
