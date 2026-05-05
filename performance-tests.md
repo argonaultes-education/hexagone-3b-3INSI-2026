@@ -220,3 +220,9 @@ Consulter la [documentation Postgres](https://www.postgresql.org/docs/18/sql-cre
 CREATE ROLE user1 WITH LOGIN CONNECTION LIMIT 2 PASSWORD 'password1';
 GRANT CREATE ON SCHEMA public TO user1;
 ```
+
+Relancer via la commande suivante un smoke test 
+
+```bash
+jmeter -n -t performance/testplan-adminer.jmx -Jthreads=10 -Jrampup=10 -Jloopcount_thread=10 -l performance/output/testplan-adminer.log -e
+```

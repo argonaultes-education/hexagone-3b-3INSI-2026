@@ -1,3 +1,11 @@
 user_name,password,db,server
-postgres,password,erp,erp
-user1,password1,erp,erp
+user1,password,erp,erp
+user1,password,crm,crm
+user2,password,erp,erp
+user2,password,crm,crm
+user3,password,erp,erp
+user3,password,crm,crm
+user4,password,erp,erp
+user4,password,crm,crm
+user5,password,erp,erp
+user5,password,crm,crm

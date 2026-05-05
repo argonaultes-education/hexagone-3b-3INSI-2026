@@ -4,14 +4,18 @@ services:
     environment:
       - POSTGRES_DB=erp
       - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
     volumes:
-      - ./scripts/user.sql:/docker-entrypoint-initdb.d/
+      - ./scripts/init_users.sh:/docker-entrypoint-initdb.d/init_users.sh:ro
 
   crm:
     image: postgres:latest
     environment:
       - POSTGRES_DB=crm
       - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+    volumes:
+      - ./scripts/init_users.sh:/docker-entrypoint-initdb.d/init_users.sh:ro
 
   hr:
     image: mysql:latest
