@@ -2,3 +2,4 @@
 *.dtmp
 *output/
 *.log
+.venv

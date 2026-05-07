@@ -128,3 +128,13 @@ jmeter -n -t performance/testplan-adminer.jmx -Jthreads=10 -Jrampup=30 -Jloopcou
 7. Visualiser les actions et leur impact dans le tableau de bord.
 
 8. Importer un tableau de bord fourni par Grafana pour visualiser plus de métriques : `9628`
+
+### Ajouter target custom
+
+1. Produire une image Docker de l'application de démo : `Dockerfile`
+
+2. Créer un conteneur basé sur cette image : `compose.yaml`
+
+3. Configurer Prometheus pour collecter les metrics de ce nouveau conteneur : `prometheus.yml`
+
+4. Afficher cette nouvelle mesure dans un tableau de bord
