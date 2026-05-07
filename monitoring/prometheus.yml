@@ -38,3 +38,10 @@ scrape_configs:
         labels:
           app: "db"
           engine: "postgres"
+  - job_name: "process_request"
+    static_configs:
+      - targets: ["process_test_request:8000"]
+        labels:
+          app: "process_request"
+          engine: "python"
+

@@ -133,7 +133,15 @@ jmeter -n -t performance/testplan-adminer.jmx -Jthreads=10 -Jrampup=30 -Jloopcou
 
 1. Produire une image Docker de l'application de démo : `Dockerfile`
 
-2. Créer un conteneur basé sur cette image : `compose.yaml`
+```bash
+docker build -t process_request:latest .
+```
+
+2. Créer un conteneur basé sur cette image : `compose.yaml` (intégrer la construction de l'image au moment de l'instanciation du service)
+
+```bash
+docker compose up -d process_test_request
+```
 
 3. Configurer Prometheus pour collecter les metrics de ce nouveau conteneur : `prometheus.yml`
 

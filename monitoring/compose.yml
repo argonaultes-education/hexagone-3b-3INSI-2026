@@ -39,6 +39,14 @@ services:
       depends_on:
         - db_to_monitor
 
+    process_test_request:
+      image: process_test_request:latest
+      build:
+        context: ../prometheus_client_test
+        dockerfile: Dockerfile
+      ports:
+        - 8000:8000
+
 volumes:
     prometheus-data:
     grafana-data:
