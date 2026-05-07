@@ -107,3 +107,7 @@ docker network connect monitoring_default grafana
 ![](./images/schema-monitoring-grafana-pg.drawio.png)
 
 Utiliser [PostgreSQLExporter](https://github.com/prometheus-community/postgres_exporter)
+
+1. Modifier le fichier compose.yaml pour intégre un service capable d'interroger la base de données afin d'extraire des métriques au format promotheus
+2. Modifier le fichier de configuration prometheus.yml pour déclarer en tant que cible valide le nouveau service exporter postgres
+3. Afficher dans un tableau de bord grafana les métriques spécifiques à l'instance postgres pour suivre son activité (nb de requêtes SQL, durée d'exécution, nombre de connexions)
