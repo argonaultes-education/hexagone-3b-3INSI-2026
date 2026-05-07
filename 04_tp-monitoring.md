@@ -121,6 +121,10 @@ Utiliser [PostgreSQLExporter](https://github.com/prometheus-community/postgres_e
    2. Ramp Up de 30 secondes
    3. 5 itérations par utilisateur
 
+```bash
+jmeter -n -t performance/testplan-adminer.jmx -Jthreads=10 -Jrampup=30 -Jloopcount_thread=5 -Jhost_sut=localhost -Jport_sut=8006 -Jusers_file=monitoring_db_users.csv -l monitoring/output/testplan-adminer.log -e
+```
+
 7. Visualiser les actions et leur impact dans le tableau de bord.
 
 8. Importer un tableau de bord fourni par Grafana pour visualiser plus de métriques : `9628`
