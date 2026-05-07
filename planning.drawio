@@ -1,4 +1,4 @@
-<mxfile host="Electron" pages="12">
+<mxfile host="Electron" pages="13">
   <diagram name="planning" id="xIy0Wb7OQuEjFhtrG6s4">
     <mxGraphModel dx="1414" dy="875" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -19,10 +19,10 @@
         <mxCell id="ihJmQ2Xfq3aGppGtk-gM-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#d5e8d4;strokeColor=#82b366;" value="J5 - 05/05" vertex="1">
           <mxGeometry height="100" width="200" x="50" y="413" as="geometry" />
         </mxCell>
-        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffe6cc;strokeColor=#d79b00;" value="J6 - 07/05" vertex="1">
+        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#d5e8d4;strokeColor=#82b366;" value="J6 - 07/05" vertex="1">
           <mxGeometry height="100" width="200" x="50" y="513" as="geometry" />
         </mxCell>
-        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" value="J7" vertex="1">
+        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" value="J7 - 09/07" vertex="1">
           <mxGeometry height="100" width="200" x="50" y="613" as="geometry" />
         </mxCell>
         <mxCell id="ihJmQ2Xfq3aGppGtk-gM-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" value="J8 - 10/07" vertex="1">
@@ -40,7 +40,7 @@
         <mxCell id="ihJmQ2Xfq3aGppGtk-gM-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#d5e8d4;strokeColor=#82b366;" value="Tests de Performance" vertex="1">
           <mxGeometry height="100" width="560" x="280" y="313" as="geometry" />
         </mxCell>
-        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Développement Orienté Services&lt;div&gt;gRPC&lt;/div&gt;" vertex="1">
+        <mxCell id="ihJmQ2Xfq3aGppGtk-gM-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#d5e8d4;strokeColor=#82b366;" value="Développement Orienté Services&lt;div&gt;gRPC&lt;/div&gt;" vertex="1">
           <mxGeometry height="100" width="280" x="560" y="513" as="geometry" />
         </mxCell>
         <mxCell id="ihJmQ2Xfq3aGppGtk-gM-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Déploiement sur Kubernetes + AutoScaling" vertex="1">
@@ -1266,6 +1266,14 @@
         <mxCell id="PsLW36_uHRrIvRMRKGh1-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" value="http_server python:8000" vertex="1">
           <mxGeometry height="119" width="200" x="600" y="400" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="siNPJn4L1sVc0NThCN4u" name="gRPC">
+    <mxGraphModel dx="1414" dy="875" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
