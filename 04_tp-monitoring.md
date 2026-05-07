@@ -112,4 +112,15 @@ Utiliser [PostgreSQLExporter](https://github.com/prometheus-community/postgres_e
 2. Modifier le fichier de configuration prometheus.yml pour déclarer en tant que cible valide le nouveau service exporter postgres
 3. Afficher dans un tableau de bord grafana les métriques spécifiques à l'instance postgres pour suivre son activité (nb de requêtes SQL, durée d'exécution, nombre de connexions)
 
-Créer un nouvel utilisateur pour le voir apparaître dans la liste des valeurs de la variable Users du tableau de bord.
+4. Créer un nouvel utilisateur pour le voir apparaître dans la liste des valeurs de la variable Users du tableau de bord. Si possible, utiliser le [script d'initialisation d'utilisateurs](./exercice4/scripts/init_users.sh) mis en place lors des tests de performance.
+
+5. Ajouter Adminer à la stack docker compose
+
+6. Exécuter le [test de performance](./performance/testplan-adminer.jmx) adminer avec les propriétés suivantes :
+   1. 10 utilisateurs concurrents
+   2. Ramp Up de 30 secondes
+   3. 5 itérations par utilisateur
+
+7. Visualiser les actions et leur impact dans le tableau de bord.
+
+8. Importer un tableau de bord fourni par Grafana pour visualiser plus de métriques : `9628`
