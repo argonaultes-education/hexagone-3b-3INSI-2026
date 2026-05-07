@@ -19,6 +19,17 @@ services:
       environment:
         - POSTGRES_PASSWORD=password
 
+    db_exporter:
+      image: quay.io/prometheuscommunity/postgres-exporter
+      environment:
+        - DATA_SOURCE_URI=db_to_monitor:5432/postgres?sslmode=disable
+        - DATA_SOURCE_USER=postgres
+        - DATA_SOURCE_PASS=password
+      ports:
+        - "9187:9187"
+      depends_on:
+        - db_to_monitor
+
 volumes:
     prometheus-data:
     grafana-data:

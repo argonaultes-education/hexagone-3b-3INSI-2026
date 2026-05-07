@@ -34,7 +34,7 @@ scrape_configs:
           city: "Versailles"
   - job_name: "db_to_monitor"
     static_configs:
-      - targets: ["db_to_monitor:5432"]
+      - targets: ["db_exporter:9187"]
         labels:
           app: "db"
           engine: "postgres"
