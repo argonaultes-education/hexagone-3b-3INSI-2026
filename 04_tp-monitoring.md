@@ -146,3 +146,18 @@ docker compose up -d process_test_request
 3. Configurer Prometheus pour collecter les metrics de ce nouveau conteneur : `prometheus.yml`
 
 4. Afficher cette nouvelle mesure dans un tableau de bord
+
+### Ajouter target custom Flask
+
+Ajouter les dépendances nécessaires à l'application
+
+```bash
+uv add prometheus_client
+uv add pyuwsgi
+```
+
+Démarrer le serveur d'application
+
+```bash
+uv run uwsgi --http 127.0.0.1:8000 --wsgi-file main.py --callable app
+```
