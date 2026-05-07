@@ -29,8 +29,13 @@ services:
         - DATA_SOURCE_URI=db_to_monitor:5432/postgres?sslmode=disable
         - DATA_SOURCE_USER=postgres
         - DATA_SOURCE_PASS=password
+      depends_on:
+        - db_to_monitor
+
+    admin:
+      image: adminer:latest
       ports:
-        - "9187:9187"
+        - "8006:8080"
       depends_on:
         - db_to_monitor
 
