@@ -47,8 +47,8 @@ Pour compléter l'environnement, 2 solutions de supervision accompagnent l'envir
 
 ## Liste de tâches
 
-* [ ] Rédiger un Dockerfile permettant de construire une image basée sur debian qui démarre un serveur ssh avec un utilisateur préexistant
-* [ ] Rédiger un Dockerfile permettant de construire une image basée sur Debian avec un client ssh permettant de tester l'image
+* [x] Rédiger un Dockerfile permettant de construire une image basée sur debian qui démarre un serveur ssh avec un utilisateur préexistant - 14h25
+* [x] Rédiger un Dockerfile permettant de construire une image basée sur Debian avec un client ssh permettant de tester l'image - 14h25
 * [ ] Rédiger un Dockerfile permettant de démarrer le serveur gRPC défini dans un script Python avec les imports nécessaires (fichiers générés par protoc)
 * [ ] Rédiger un Dockerfile permettant de démarrer le script Python utilisant le stub gRPC correspondant. Inclure les imports nécessaires (fichiers générés par protoc)
 * [ ] Rédiger un Dockerfile permettant de démarrer un script python qui lit un fichier de log et expose le résultat de cette lecture au format metrics prometheus en utilisant le client python [prometheus-client](https://github.com/prometheus/client_python)
@@ -58,3 +58,39 @@ Pour compléter l'environnement, 2 solutions de supervision accompagnent l'envir
 * [ ] Rédiger le fichier yaml de création du déploiement du pod sshmachine qui regroupe 3 conteneurs.
 * [ ] Rédiger le fichier kustomization pour déclencher la création de l'ensemble des ressources avec 1 pod pour chaque déploiement/statefulset
 * [ ] Rédiger les fichiers yaml de défintion de services correspondants
+
+## Pas à pas
+
+### Serveur SSH
+
+Construction de l'image
+
+```bash
+docker build -t tp_mysshserver:latest -f Dockerfile.sshserver .
+```
+
+Génération de la paire de clé à utiliser pour la suite
+
+```bash
+ssh-keygen
+```
+
+récupérer la clé SSH du conteneur
+
+```bash
+docker cp jolly_mayer:/root/.ssh/id_ed25519.pub ./
+```
+
+### Client SSH
+
+Construire l'image pour le client
+
+```bash
+docker build -t tp_mysshclient:latest -f Dockerfile.sshclient .
+```
+
+Tester la connexion vers le ssh associé
+
+```bash
+docker run -it --rm tp_mysshclient:latest
+```

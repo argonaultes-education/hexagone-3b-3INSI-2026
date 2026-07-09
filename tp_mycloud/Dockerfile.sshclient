@@ -1,0 +1,6 @@
+FROM debian:latest
+
+USER root
+RUN apt update && apt install -y ssh
+
+COPY ./ssh_keys/id_ed25519 /root/
