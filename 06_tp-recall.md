@@ -55,9 +55,9 @@ Pour compléter l'environnement, 2 solutions de supervision accompagnent l'envir
 * [ ] Rédiger le fichier yaml de définition du statefulset pour grafana
 * [ ] Rédiger le fichier yaml de définition du statefulset pour prometheus
 * [ ] Rédiger le fichier yaml de création du **configmap** et utilisation en tant que volume pour personnaliser les target prometheus `/etc/prometheus/prometheus.yml`
-* [ ] Rédiger le fichier yaml de création du déploiement du pod sshmachine qui regroupe 3 conteneurs.
+* [ ] Rédiger le fichier yaml de création du déploiement du pod sshmachine qui regroupe 3 conteneurs. 16h40
 * [ ] Rédiger le fichier kustomization pour déclencher la création de l'ensemble des ressources avec 1 pod pour chaque déploiement/statefulset
-* [ ] Rédiger les fichiers yaml de défintion de services correspondants
+* [ ] Rédiger les fichiers yaml de défintion de services correspondants 16h40
 
 ## Pas à pas
 
@@ -145,3 +145,11 @@ docker run --rm mylistgrpcclient:latest 172.17.0.3 50051
 
 ### Déploiement dans Kubernetes
 
+Mettre à disposition de minikube les images construites
+
+```bash
+minikube image load mylistgrpcclient:latest
+minikube image load mylistgrpcserver:latest
+minikube image load tpmysshserver:latest
+minikube image load tpmysshclient:latest
+```

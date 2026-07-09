@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sshdeploy
+  labels:
+    app: sshdeploy
+spec:
+  selector:
+    matchLabels:
+      app: sshdeploy
+  template:
+    metadata:
+      name: sshdeploy
+      labels:
+        app: sshdeploy
+    spec:
+      containers:
+        - name: sshserver
+          image: tpmysshserver:latest
+          imagePullPolicy: Never
+        - name: grpcserver
+          image: mylistgrpcserver:latest
+          command: [ "/tmp/" ]
+          imagePullPolicy: Never
