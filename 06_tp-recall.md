@@ -20,7 +20,30 @@ Pour compléter l'environnement, 2 solutions de supervision accompagnent l'envir
 
 ## Livrables
 
-TODO
+* Image Docker qui permet de créer un serveur SSH basé sur une debian : **Dockerfile**
+* Image Docker qui permet de démarrer un serveur gRPC dont la fonction est de lister le contenu d'un dossier : **Dockerfile**
+* Image Docker qui permet d'exposer une métrique au format prometheus qui compte le nombre de connexions tracées dans un fichier de log SSH : **Dockerfile**
+* Image Docker qui permet d'utiliser un client SSH : **Dockerfile**
+* Image Docker qui permet de faire appel a gRPC server : **Dockerfile**
+* Images déjà construites :
+  * **Grafana**
+  * **Prometheus**
+* Dossier kustomization qui permet de construire les ressources suivantes via des fichiers yaml :
+  * volumes
+    * grafana
+    * prometheus
+    * ssh_user
+  * statefulset
+    * prometheus
+    * grafana
+  * déploiement
+    * sshmachine
+  * services
+    * prometheus (ClusterIP)
+    * grafana (NodePort)
+    * sshmachine (ClusterIP ssh)
+    * sshmachine (ClusterIP http prom)
+    * sshmachine (ClusterIP proto grpc)
 
 ## Liste de tâches
 
