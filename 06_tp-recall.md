@@ -49,8 +49,8 @@ Pour compléter l'environnement, 2 solutions de supervision accompagnent l'envir
 
 * [x] Rédiger un Dockerfile permettant de construire une image basée sur debian qui démarre un serveur ssh avec un utilisateur préexistant - 14h25
 * [x] Rédiger un Dockerfile permettant de construire une image basée sur Debian avec un client ssh permettant de tester l'image - 14h25
-* [ ] Rédiger un Dockerfile permettant de démarrer le serveur gRPC défini dans un script Python avec les imports nécessaires (fichiers générés par protoc) spécifié au démarrage
-* [ ] Rédiger un Dockerfile permettant de démarrer le script Python utilisant le stub gRPC correspondant. Inclure les imports nécessaires (fichiers générés par protoc)
+* [ ] Rédiger un Dockerfile permettant de démarrer le serveur gRPC défini dans un script Python avec les imports nécessaires (fichiers générés par protoc) spécifié au démarrage - 15h25
+* [ ] Rédiger un Dockerfile permettant de démarrer le script Python utilisant le stub gRPC correspondant. Inclure les imports nécessaires (fichiers générés par protoc) - 15h25
 * [ ] Rédiger un Dockerfile permettant de démarrer un script python qui lit un fichier de log et expose le résultat de cette lecture au format metrics prometheus en utilisant le client python [prometheus-client](https://github.com/prometheus/client_python)
 * [ ] Rédiger le fichier yaml de définition du statefulset pour grafana
 * [ ] Rédiger le fichier yaml de définition du statefulset pour prometheus
@@ -101,4 +101,20 @@ Pour mettre à disposition les images créés au cluster kubernets via minikube,
 
 ```bash
 minikube image load <image:[tag]>
+```
+
+### Projet list de fichiers gRPC
+
+Initialiser un projet uv complet
+
+```bash
+uv init --bare
+```
+
+Ajouter les dépendances en fonction de leur utilisation.
+
+Générer les scripts python
+
+```bash
+uv run python -m grpc_tools.protoc -I. --python_out=. --pyi_out=. --grpc_python_out=. mylist.proto
 ```

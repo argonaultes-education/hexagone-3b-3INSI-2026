@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+service MyList {
+    rpc GiveMyList (MyListRequest) returns (MyListResponse) {}
+}
+
+message MyListRequest {
+}
+
+message MyListResponse {
+  repeated string files = 1;
+}
