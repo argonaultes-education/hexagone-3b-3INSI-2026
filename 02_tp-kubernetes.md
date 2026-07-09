@@ -55,7 +55,7 @@ kubectl create deployment deploynginx --image=nginx:latest
 Essayer de supprimer le pod déployé
 
 ```bash
-kubectl delete pod/deploynginx-
+kubectl delete pod/deploynginx
 ```
 
 Créer une ressource pod simple
@@ -64,7 +64,7 @@ Créer une ressource pod simple
 kubectl run podnginx --image=nginx:latest
 ```
 
-Supprimer le pod podnginx
+Supprimer le pod pod nginx
 
 ```bash
 kubectl delete pod/podnginx
