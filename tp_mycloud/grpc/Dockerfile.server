@@ -1,1 +1,13 @@
 FROM python:3.11
+
+COPY requirements.txt /opt/app/requirements.txt
+RUN pip install -r /opt/app/requirements.txt
+
+COPY mylist_pb2_grpc.py /opt/app
+COPY mylist_pb2.py /opt/app
+COPY mylist_pb2.pyi /opt/app
+COPY mylistserver.py /opt/app
+
+EXPOSE 50051
+
+ENTRYPOINT [ "python", "/opt/app/mylistserver.py" ]

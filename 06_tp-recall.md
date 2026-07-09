@@ -49,8 +49,8 @@ Pour compléter l'environnement, 2 solutions de supervision accompagnent l'envir
 
 * [x] Rédiger un Dockerfile permettant de construire une image basée sur debian qui démarre un serveur ssh avec un utilisateur préexistant - 14h25
 * [x] Rédiger un Dockerfile permettant de construire une image basée sur Debian avec un client ssh permettant de tester l'image - 14h25
-* [ ] Rédiger un Dockerfile permettant de démarrer le serveur gRPC défini dans un script Python avec les imports nécessaires (fichiers générés par protoc) spécifié au démarrage - 15h25
-* [ ] Rédiger un Dockerfile permettant de démarrer le script Python utilisant le stub gRPC correspondant. Inclure les imports nécessaires (fichiers générés par protoc) - 15h25
+* [x] Rédiger un Dockerfile permettant de démarrer le serveur gRPC défini dans un script Python avec les imports nécessaires (fichiers générés par protoc) spécifié au démarrage - 15h25
+* [x] Rédiger un Dockerfile permettant de démarrer le script Python utilisant le stub gRPC correspondant. Inclure les imports nécessaires (fichiers générés par protoc) - 15h25
 * [ ] Rédiger un Dockerfile permettant de démarrer un script python qui lit un fichier de log et expose le résultat de cette lecture au format metrics prometheus en utilisant le client python [prometheus-client](https://github.com/prometheus/client_python)
 * [ ] Rédiger le fichier yaml de définition du statefulset pour grafana
 * [ ] Rédiger le fichier yaml de définition du statefulset pour prometheus
@@ -118,3 +118,30 @@ Générer les scripts python
 ```bash
 uv run python -m grpc_tools.protoc -I. --python_out=. --pyi_out=. --grpc_python_out=. mylist.proto
 ```
+
+Construire les images serveur et client
+
+```bash
+docker build -t mylistgrpcserver:latest -f Dockerfile.server .
+```
+
+Construire l'image client
+
+```bash
+docker build -t mylistgrpcclient:latest -f Dockerfile.client .
+```
+
+Démarrer le serveur grpc avec en commande le chemin cible
+
+```bash
+docker run --rm -v /home/gael/Projects/argonaultes/2025-2026/hexagone-3b-3INSI-2026/performance:/tmp/targetpath mylistgrpcserver:latest /tmp/targetpath
+```
+
+Démarrer le conteneur client qui interroge le serveur en indiquant en paramètre l'adresse du serveur grpc ainsi que le port d'écoute
+
+```bash
+docker run --rm mylistgrpcclient:latest 172.17.0.3 50051
+```
+
+### Déploiement dans Kubernetes
+
