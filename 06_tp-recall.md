@@ -94,3 +94,11 @@ Tester la connexion vers le ssh associé
 ```bash
 docker run -it --rm tp_mysshclient:latest
 ```
+
+### Mise à disposition des images au cluster
+
+Pour mettre à disposition les images créés au cluster kubernets via minikube, charger directement les images
+
+```bash
+minikube image load <image:[tag]>
+```
