@@ -47,4 +47,14 @@ Pour compléter l'environnement, 2 solutions de supervision accompagnent l'envir
 
 ## Liste de tâches
 
-* [ ] todo 1
+* [ ] Rédiger un Dockerfile permettant de construire une image basée sur debian qui démarre un serveur ssh avec un utilisateur préexistant
+* [ ] Rédiger un Dockerfile permettant de construire une image basée sur Debian avec un client ssh permettant de tester l'image
+* [ ] Rédiger un Dockerfile permettant de démarrer le serveur gRPC défini dans un script Python avec les imports nécessaires (fichiers générés par protoc)
+* [ ] Rédiger un Dockerfile permettant de démarrer le script Python utilisant le stub gRPC correspondant. Inclure les imports nécessaires (fichiers générés par protoc)
+* [ ] Rédiger un Dockerfile permettant de démarrer un script python qui lit un fichier de log et expose le résultat de cette lecture au format metrics prometheus en utilisant le client python [prometheus-client](https://github.com/prometheus/client_python)
+* [ ] Rédiger le fichier yaml de définition du statefulset pour grafana
+* [ ] Rédiger le fichier yaml de définition du statefulset pour prometheus
+* [ ] Rédiger le fichier yaml de création du **configmap** et utilisation en tant que volume pour personnaliser les target prometheus `/etc/prometheus/prometheus.yml`
+* [ ] Rédiger le fichier yaml de création du déploiement du pod sshmachine qui regroupe 3 conteneurs.
+* [ ] Rédiger le fichier kustomization pour déclencher la création de l'ensemble des ressources avec 1 pod pour chaque déploiement/statefulset
+* [ ] Rédiger les fichiers yaml de défintion de services correspondants
